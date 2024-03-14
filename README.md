@@ -26,7 +26,7 @@ sealed classes as preview feature which provides a fine grained control over inh
 
 [Q2](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q2)Java 16 - Pattern Matching for instanceof
 
-Type test pattern has a predicate to specify a type with a single binding variable
+[Type](url) test pattern has a predicate to specify a type with a single binding variable
 
 [Q3](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q3)Java 16 - Warnings for Value-Based Classes
 
