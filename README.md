@@ -5,20 +5,14 @@
 | Sno | Question                                                 | 
 |-----|----------------------------------------------------------| 
 |   1 |  **Java 16 -Sealed Classes**                             | 
-|   2 |  **Java 16 -Pattern Matching for instanceof**            | 
-|-----|----------------------------------------------------------| 
-|   3 |  **Java 16 -Warnings for Value-Based Classes**           | 
-|-----|----------------------------------------------------------| 
-|   4 |  **Java 16 -Record**                                     | 
-|-----|----------------------------------------------------------| 
-|   5 |  **Java 16 -Packaging Tools**                            | 
-|-----|----------------------------------------------------------| 
-|  6  |  **Java 16 -Garbage Collectors**                         | 
-|-----|----------------------------------------------------------| 
-|   7 |  **Java 16 -Other Changes**                              | 
-|-----|----------------------------------------------------------| 
+|   2 |  **Java 16 -Pattern Matching for instanceof**            |
+|   3 |  **Java 16 -Warnings for Value-Based Classes**           |
+|   4 |  **Java 16 -Record**                                     |
+|   5 |  **Java 16 -Packaging Tools**                            |
+|   6 |  **Java 16 -Garbage Collectors**                         |
+|   7 |  **Java 16 -Other Changes**                              |
 |   8 |  **Java 16 -Deprecation & Removals**                     | 
-|-----|----------------------------------------------------------|
+
 
 **Interview Questions with Answers**
 
