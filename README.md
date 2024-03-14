@@ -11,4 +11,4 @@ What happens if browserModule used in feature module?
 
 [Contribution guidelines for this project](docs/CONTRIBUTING.md)
 
-https://github.com/sudheerj/angular-interview-questions?tab=readme-ov-file#what-happens-if-browsermodule-used-in-feature-module
+https://github.com/sudheerj/angular-interview-questions?tab=readme-ov-file#Contribution guidelines for this project
