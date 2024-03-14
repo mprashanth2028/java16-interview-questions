@@ -1,7 +1,4 @@
-# java16-interview-questions
-java16-interview-questions
-Table of Contents
-No.	Questions
+**java16-interview-questions**
 
 [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1) **Java 16 -Sealed Classes**
 
@@ -26,7 +23,7 @@ sealed classes as preview feature which provides a fine grained control over inh
 
 [Q2](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q2)Java 16 - Pattern Matching for instanceof
 
-[Type](url) test pattern has a predicate to specify a type with a single binding variable
+Type test pattern has a predicate to specify a type with a single binding variable
 
 [Q3](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q3)Java 16 - Warnings for Value-Based Classes
 
