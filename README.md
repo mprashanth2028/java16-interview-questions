@@ -7,5 +7,8 @@ No.	Questions
 3	What is TypeScript?
 This site was built using [GitHub Pages](https://pages.github.com/).
 This site was built using [GitHub Pages](https://pages.github.com/).
-What happens if browserModule used in feature module?[
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images](https://github.com/sudheerj/angular-interview-questions?tab=readme-ov-file#what-happens-if-browsermodule-used-in-feature-module)https://github.com/sudheerj/angular-interview-questions?tab=readme-ov-file#what-happens-if-browsermodule-used-in-feature-module
+What happens if browserModule used in feature module?
+
+
+
+(https://github.com/sudheerj/angular-interview-questions?tab=readme-ov-file#what-happens-if-browsermodule-used-in-feature-module)https://github.com/sudheerj/angular-interview-questions?tab=readme-ov-file#what-happens-if-browsermodule-used-in-feature-module
