@@ -2,24 +2,24 @@
 
 **Interview Questions**
 
-| Sno           | Question                                                                                                                   | 
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------| 
-|   1           | [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1) **Java 16 -Sealed Classes**        | 
-
-
-[2](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q2) **Java 16 - Pattern Matching for instanceof**
-
-[3](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q3)**Java 16 - Warnings for Value-Based Classes**
-
-[4](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q4)**Java 16 - Record**  
-
-[5](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q5)**Java 16 - Packaging Tools**
-
-[6](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q6)**Java 16 - Garbage Collectors**
-
-[7](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q7)**Java 16 - Other Changes**
-
-[8](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q8)**Java 16 - Deprecation & Removals**
+| Sno                                                                                                 | Question                             | 
+| ----------------------------------------------------------------------------------------------------| -------------------------------------| 
+|   [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1)           |  **Java 16 -Sealed Classes**         | 
+| ----------------------------------------------------------------------------------------------------| -------------------------------------| 
+|   [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1)           |  **Java 16 -Pattern Matching for instanceof**         | 
+| ----------------------------------------------------------------------------------------------------| -------------------------------------| 
+|   [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1)           |  **Java 16 -Warnings for Value-Based Classes**         | 
+| ----------------------------------------------------------------------------------------------------| -------------------------------------| 
+|   [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1)           |  **Java 16 -Record**         | 
+| ----------------------------------------------------------------------------------------------------| -------------------------------------| 
+|   [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1)           |  **Java 16 -Packaging Tools**         | 
+| ----------------------------------------------------------------------------------------------------| -------------------------------------| 
+|   [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1)           |  **Java 16 -Garbage Collectors**         | 
+| ----------------------------------------------------------------------------------------------------| -------------------------------------| 
+|   [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1)           |  **Java 16 -Other Changes**         | 
+| ----------------------------------------------------------------------------------------------------| -------------------------------------| 
+|   [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1)           |  **Java 16 -Deprecation & Removals**         | 
+| ----------------------------------------------------------------------------------------------------| -------------------------------------| 
 
 
 **Interview Questions with Answers**
