@@ -1,5 +1,7 @@
 **java16-interview-questions**
 
+**Interview Questions**
+
 [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1) **Java 16 -Sealed Classes**
 
 [2](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q2) **Java 16 - Pattern Matching for instanceof**
@@ -16,6 +18,8 @@
 
 [8](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q8)**Java 16 - Deprecation & Removals**
 
+
+**Interview Questions with Answers**
 
 [Q1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1) **Java 16 -Sealed Classes**
 sealed classes as preview feature which provides a fine grained control over inheritance
