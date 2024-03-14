@@ -3,7 +3,7 @@
 **Interview Questions**
 
 | Sno                                                                                                 | Question                                             | 
-| -----------------------------------------------------------------------------------------| -------------------------------------                           | 
+|                            | 
 |   [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1)           |  **Java 16 -Sealed Classes**                         | 
 | -----------------------------------------------------------------------------------------| -------------------------------------                           | 
 |   [1](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q1)           |  **Java 16 -Pattern Matching for instanceof**        | 
