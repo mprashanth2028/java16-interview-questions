@@ -30,6 +30,11 @@ Type test pattern has a predicate to specify a type with a single binding variab
 
 [Q5](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q5)**Java 16 - Packaging Tools**
 
+Packaging tool is developed to provide native installer for an operating system. For example, an msi/exe for windows, pkg/dmg for MacOS, deb/rpm for Linux and so on. Without this tool, developer generally share a jar file which a user has to run within own JVM.
+
+Developer can use jlink to compress the required JDK modules to minimum modules and use the jpackage to create a lightweight image
+
+
 [Q6](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q6)**Java 16 - Garbage Collectors**
 
 [Q7](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Q7)**Java 16 - Other Changes**
