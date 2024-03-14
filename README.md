@@ -2,17 +2,11 @@
 java16-interview-questions
 Table of Contents
 No.	Questions
-1	<a> What is Angular Framework? </a>
-2	What is the difference between AngularJS and Angular?
-3	What is TypeScript?
-This site was built using [GitHub Pages](https://pages.github.com/).
-This site was built using [GitHub Pages](https://pages.github.com/).
-What happens if browserModule used in feature module?
 
-[11](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#1) Java 16 -Sealed Classes
-[12](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Contribution2)Java 16 - Pattern Matching for instanceof
-[13](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Contribution2)Java 16 - Warnings for Value-Based Classes
-[14](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Contribution2)Java 16 - Record
+[11](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#1) ##Java 16 -Sealed Classes
+[12](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#2) ##Java 16 - Pattern Matching for instanceof
+[13](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Contribution3)Java 16 - Warnings for Value-Based Classes
+[14](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Contribution4)Java 16 - Record
 [15](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Contribution2)Java 16 - Packaging Tools
 [16](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Contribution2)Java 16 - Garbage Collectors
 [17](https://github.com/mprashanth2028/java16-interview-questions?tab=readme-ov-file#Contribution2)Java 16 - Other Changes
