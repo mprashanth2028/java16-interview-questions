@@ -1,0 +1,57 @@
+Java has evolved significantly since its inception, introducing numerous features and enhancements across its versions. Here's an overview of the major Java versions and their key features:​
+
+Java SE 1.0 (1996):
+
+Initial release laying the foundation for the Java programming language.​
+Java SE 1.1 (1997):
+
+Introduced inner classes, JavaBeans, and JDBC for database connectivity.​
+en.wikipedia.org
++1
+stackoverflow.com
++1
+Java SE 2 (1998-2000):
+
+Known as J2SE, it introduced the Collections Framework, Swing for GUI development, and the HotSpot JVM.​
+Java SE 5 (2004):
+
+Introduced generics, annotations, enumerations, and the enhanced for-loop.​
+en.wikipedia.org
+Java SE 6 (2006):
+
+Enhanced Web Services support, included scripting language support (JSR 223), and improvements to the JVM.​
+en.wikipedia.org
+Java SE 7 (2011):
+
+Introduced the try-with-resources statement, the diamond operator, and the NIO.2 filesystem API.​
+en.wikipedia.org
+Java SE 8 (2014):
+
+Introduced lambda expressions, the Stream API, and a new Date and Time API.​
+Java SE 9 (2017):
+
+Introduced the Java Platform Module System (JPMS) and JShell, an interactive REPL tool.​
+en.wikipedia.org
+Java SE 10 (2018):
+
+Introduced local-variable type inference using the 'var' keyword.​
+en.wikipedia.org
+Java SE 11 (2018):
+
+A Long-Term Support (LTS) release that introduced a new HTTP client and removed Java EE and CORBA modules.​
+en.wikipedia.org
++1
+en.wikipedia.org
++1
+Java SE 17 (2021):
+
+An LTS release that introduced pattern matching for switch statements and sealed classes.​
+en.wikipedia.org
++1
+howtodoinjava.com
++1
+Java SE 21 (2023):
+
+The latest LTS release, introducing features like virtual threads and structured concurrency.​
+medium.com
+For a comprehensive list of Java versions and their features, you can refer to the Java version history. 
