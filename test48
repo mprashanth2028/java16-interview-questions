@@ -1,0 +1,120 @@
+import org.w3c.dom.*
+import java.io.StringReader
+import java.nio.charset.StandardCharsets
+import java.nio.file.Files
+import java.nio.file.Paths
+import javax.xml.parsers.DocumentBuilderFactory
+import org.xml.sax.InputSource
+
+fun main(args: Array<String>) {
+    // --- Arguments ---
+    // args[0] = "asc" | "desc" (default = desc)
+    // args[1] = file path (optional, otherwise use default string)
+
+    val sortDescending = if (args.isNotEmpty() && args[0].equals("asc", ignoreCase = true)) {
+        false
+    } else {
+        true
+    }
+
+    val xml: String = if (args.size > 1) {
+        Files.readString(Paths.get(args[1]), StandardCharsets.UTF_8)
+    } else {
+        """
+        <root>
+            <person name="Alice" age="25" city="London"/>
+            <person city="NewYork" id="101" country="USA">Hello</person>
+        </root>
+        """.trimIndent()
+    }
+
+    // --- Parse XML ---
+    val factory = DocumentBuilderFactory.newInstance()
+    factory.isNamespaceAware = true
+    val builder = factory.newDocumentBuilder()
+    val doc = builder.parse(InputSource(StringReader(xml)))
+
+    // --- Build sorted XML manually ---
+    val sb = StringBuilder()
+    sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n")
+    writeElement(doc.documentElement, sb, sortDescending, "")
+
+    println(sb.toString())
+}
+
+private fun writeElement(elem: Element, sb: StringBuilder, descending: Boolean, indent: String) {
+    sb.append(indent).append("<").append(elem.tagName)
+
+    // Collect attributes
+    val attrList = mutableListOf<Attr>()
+    val attributes = elem.attributes
+    for (i in 0 until attributes.length) {
+        val n = attributes.item(i)
+        if (n is Attr) attrList.add(n)
+    }
+
+    // Sort attributes
+    val comparator = compareBy<Attr> { it.name }
+    val sorted = if (descending) attrList.sortedWith(comparator.reversed()) else attrList.sortedWith(comparator)
+
+    // Append attributes
+    for (a in sorted) {
+        sb.append(" ").append(a.name).append("=\"").append(escapeXml(a.value)).append("\"")
+    }
+
+    // Process children
+    val children = elem.childNodes
+    var hasElementChild = false
+    val textCollector = StringBuilder()
+    for (i in 0 until children.length) {
+        val c = children.item(i)
+        when (c.nodeType) {
+            Node.ELEMENT_NODE -> hasElementChild = true
+            Node.TEXT_NODE -> textCollector.append(c.textContent)
+        }
+    }
+    val textOnly = textCollector.toString().trim()
+
+    if (!hasElementChild && textOnly.isEmpty()) {
+        sb.append("/>")
+        return
+    }
+
+    if (!hasElementChild) {
+        sb.append(">")
+        sb.append(escapeXml(textOnly))
+        sb.append("</").append(elem.tagName).append(">")
+        return
+    }
+
+    // Pretty print children
+    sb.append(">\n")
+    for (i in 0 until children.length) {
+        val c = children.item(i)
+        when (c.nodeType) {
+            Node.ELEMENT_NODE -> {
+                writeElement(c as Element, sb, descending, indent + "    ")
+                sb.append("\n")
+            }
+            Node.TEXT_NODE -> {
+                val t = c.textContent.trim()
+                if (t.isNotEmpty()) {
+                    sb.append(indent).append("    ").append(escapeXml(t)).append("\n")
+                }
+            }
+            Node.COMMENT_NODE -> {
+                sb.append(indent).append("    <!--").append((c as Comment).data).append("-->\n")
+            }
+        }
+    }
+    sb.append(indent).append("</").append(elem.tagName).append(">")
+}
+
+private fun escapeXml(s: String?): String {
+    if (s == null) return ""
+    return s.replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace("\"", "&quot;")
+        .replace("'", "&apos;")
+}
