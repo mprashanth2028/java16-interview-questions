@@ -1,0 +1,134 @@
+package com.mkyong;
+
+//public class Test47 {
+
+	//public static void main(String[] args) {import org.w3c.dom.*;
+	import javax.xml.parsers.*;
+
+import org.w3c.dom.Attr;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+	import java.io.*;
+	import java.nio.charset.StandardCharsets;
+	import java.nio.file.*;
+	import java.util.*;
+
+	public class Test47 {
+	    public static void main(String[] args) throws Exception {
+	        // parse args: [asc|desc] [inputFile]
+	        boolean descending = true; // default
+	        int idx = 0;
+	        if (args.length > 0 && (args[0].equalsIgnoreCase("asc") || args[0].equalsIgnoreCase("desc"))) {
+	            descending = args[0].equalsIgnoreCase("desc");
+	            idx = 1;
+	        }
+
+	        String xml;
+	        if (args.length > idx) {
+	            xml = new String(Files.readAllBytes(Paths.get(args[idx])), StandardCharsets.UTF_8);
+	        } else {
+	            // default example if no file provided
+	            xml = "<root>\n"
+	                + "  <person name=\"Alice\" age=\"25\" city=\"London\"/>\n"
+	                + "  <person city=\"NewYork\" id=\"101\" country=\"USA\">Hello</person>\n"
+	                + "</root>";
+	        }
+
+	        // Parse XML into DOM
+	        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	        factory.setNamespaceAware(true);
+	        DocumentBuilder builder = factory.newDocumentBuilder();
+	        Document doc = builder.parse(new InputSource(new StringReader(xml)));
+
+	        // Build output manually with sorted attributes
+	        StringBuilder sb = new StringBuilder();
+	        sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+	        Element root = doc.getDocumentElement();
+	        writeElement(root, sb, descending, "");
+
+	        System.out.println(sb.toString());
+	    }
+
+	    // Recursively write element with attributes sorted (preserves order in output)
+	    private static void writeElement(Element elem, StringBuilder sb, boolean descending, String indent) {
+	        sb.append(indent).append("<").append(elem.getTagName());
+
+	        // collect attributes
+	        NamedNodeMap attributes = elem.getAttributes();
+	        List<Attr> attrList = new ArrayList<>();
+	        for (int i = 0; i < attributes.getLength(); i++) {
+	            Node n = attributes.item(i);
+	            if (n instanceof Attr) attrList.add((Attr) n);
+	        }
+
+	        // sort by name asc or desc
+	        Comparator<Attr> comp = Comparator.comparing(Attr::getName);
+	        if (descending) comp = comp.reversed();
+	        attrList.sort(comp);
+
+	        // append attributes in sorted order
+	        for (Attr a : attrList) {
+	            sb.append(" ").append(a.getName()).append("=\"").append(escapeXml(a.getValue())).append("\"");
+	        }
+
+	        // examine children
+	        NodeList children = elem.getChildNodes();
+	        boolean hasElementChild = false;
+	        StringBuilder textCollector = new StringBuilder();
+	        for (int i = 0; i < children.getLength(); i++) {
+	            Node c = children.item(i);
+	            if (c.getNodeType() == Node.ELEMENT_NODE) hasElementChild = true;
+	            if (c.getNodeType() == Node.TEXT_NODE) textCollector.append(c.getTextContent());
+	        }
+
+	        String textOnly = textCollector.toString().trim();
+
+	        if (!hasElementChild && textOnly.isEmpty()) {
+	            // empty element
+	            sb.append("/>");
+	            return;
+	        }
+
+	        if (!hasElementChild) {
+	            // element with only text content -> inline
+	            sb.append(">");
+	            sb.append(escapeXml(textOnly));
+	            sb.append("</").append(elem.getTagName()).append(">");
+	            return;
+	        }
+
+	        // mixed / element children: pretty-print with indentation
+	        sb.append(">\n");
+	        for (int i = 0; i < children.getLength(); i++) {
+	            Node c = children.item(i);
+	            if (c.getNodeType() == Node.ELEMENT_NODE) {
+	                writeElement((Element) c, sb, descending, indent + "    ");
+	                sb.append("\n");
+	            } else if (c.getNodeType() == Node.TEXT_NODE) {
+	                String t = c.getTextContent().trim();
+	                if (!t.isEmpty()) {
+	                    sb.append(indent).append("    ").append(escapeXml(t)).append("\n");
+	                }
+	            } else if (c.getNodeType() == Node.COMMENT_NODE) {
+	             //   sb.append(indent).append("    <!--").append(((Comment) c).getData()).append("-->\n");
+	            }
+	        }
+	        sb.append(indent).append("</").append(elem.getTagName()).append(">");
+	    }
+
+	    private static String escapeXml(String s) {
+	        if (s == null) return "";
+	        return s.replace("&", "&amp;")
+	                .replace("<", "&lt;")
+	                .replace(">", "&gt;")
+	                .replace("\"", "&quot;")
+	                .replace("'", "&apos;");
+	    }
+	
+
+
+}
